@@ -9,4 +9,5 @@ RUN echo "vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN puppet apply /puppet/manifests/site.pp --modulepath /puppet/modules
 USER vagrant
 ENV HOME /home/vagrant
+WORKDIR /home/vagrant
 ENV SHELL /bin/bash
